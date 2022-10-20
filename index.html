@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASCII</title>
+  </head>
+  <body>
+    <canvas width="640" height="480" class="canvas" id="canvas"></canvas>
+    <canvas width="640" height="480" class="helper" id="helper"></canvas>
+    <video width="640" height="480" class="video" id="video"></video>
+
+    <div class="panel">
+      <div class="line">
+        <div class="label">
+          <label for="pixel">Pixel size</label>
+          <span id="pixel-size-value">4px</span>
+        </div>
+        <input type="range" min="1" max="30" step="1" id="pixel-size" value="4" />
+      </div>
+
+      <div class="line">
+        <input type="checkbox" id="advanced-palette" />
+        <label for="advanced-palette">Advanced Palette</label>
+      </div>
+
+      <div class="line">
+        <input type="checkbox" id="inversion" />
+        <label for="inversion">Inversion</label>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
