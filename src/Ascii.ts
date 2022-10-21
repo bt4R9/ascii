@@ -87,15 +87,17 @@ export class Ascii {
         const { R, G, B } = this.averageColor(y, x);
 
         const symbol = this.getSymbol(R, G, B);
+        const ny = (y / this.resolution) | 0;
+        const nx = (x / this.resolution) | 0;
 
-        symbols.push({
-          y,
-          x,
-          symbol
-        });
+        symbols.push({ y: ny, x: nx, symbol });
       }
     }
 
-    return symbols;
+    return {
+      symbols,
+      width: (this.#width / this.resolution) | 0,
+      height: (this.#height / this.#height) | 0,
+    };
   }
 }
