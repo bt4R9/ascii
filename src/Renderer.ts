@@ -31,7 +31,7 @@ export class Renderer {
     this.frameId = requestAnimationFrame(this.animate);
     this.helperContext.drawImage(this.video, 0, 0, this.helper.width, this.helper.height);
 
-    const { symbols, width, height } = this.ascii.transform();
+    const { symbols } = this.ascii.transform();
 
     if (this.ascii.inversion) {
       this.canvasContext.fillStyle = '#000';
